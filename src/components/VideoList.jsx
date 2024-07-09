@@ -15,7 +15,6 @@ const VideoList = () => {
     try {
       const response = await fetch(YOUTUBE_LIST_API);
       const data = await response.json();
-      console.log(data.items);
       setVideoList(data.items);
     } catch (error) {
       console.log(error);

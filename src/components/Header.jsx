@@ -2,6 +2,7 @@ import React from 'react'
 import Search from './Search'
 import { useDispatch } from 'react-redux'
 import { toggleMenu } from '../utils/menuSlice'
+import { Link } from 'react-router-dom'
 
 const Header = () => {
 
@@ -15,7 +16,7 @@ const Header = () => {
     <div className='m-2, p-2 grid grid-flow-col shadow'>
       <div className='col-span-1 flex'>
         <img className='h-8 w-8 m-2' onClick={handleToggleMenu} src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/1200px-Hamburger_icon.svg.png" alt="menu" />
-        <a href="/"><img className='h-8 m-2' alt='logo' src='https://www.clipartmax.com/png/small/294-2941508_youtube-icon-youtube-logo-png.png' /></a>
+        <Link to="/"><img className='h-8 m-2' alt='logo' src='https://www.clipartmax.com/png/small/294-2941508_youtube-icon-youtube-logo-png.png' /></Link>
       </div>
       <div className="col-span-10 m-2 text-center">
         <Search />
