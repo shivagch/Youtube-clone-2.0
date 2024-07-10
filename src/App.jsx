@@ -4,9 +4,9 @@ import Body from './components/Body'
 import Header from './components/Header'
 import store from './utils/store'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import VideoScreen from './components/VideoScreen'
 import Content from './components/Content'
 import SearchResults from './components/SearchResults'
+import VideoBody from './components/VideoBody'
 
 const BrowserRouter = createBrowserRouter([{
   path: '/',
@@ -18,7 +18,7 @@ const BrowserRouter = createBrowserRouter([{
     },
     {
       path: 'watch',
-      element: <VideoScreen />
+      element: <VideoBody />
     },
     {
       path: 'results',
