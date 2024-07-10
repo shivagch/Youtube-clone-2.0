@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { YOUTUBE_LIST_API } from '../utils/constants'
 import Video from './Video';
 import { Link } from 'react-router-dom';
+import VideoListShimmer from './VideoListShimmer';
 
 const VideoList = () => {
   const [videoList, setVideoList] = useState([]); 
@@ -19,6 +20,10 @@ const VideoList = () => {
     } catch (error) {
       console.log(error);
     }
+  }
+
+  if(videoList.length === 0) {
+    return <VideoListShimmer />
   }
 
   return (

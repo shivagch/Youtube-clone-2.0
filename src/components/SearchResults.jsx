@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Link, useSearchParams } from 'react-router-dom'
 import { YOUTUBE_SEARCH_RESULT_API } from '../utils/constants';
+import SearchResultsShimmer from './SearchResultsShimmer';
 
 const SearchResults = () => {
     const [searchParams] = useSearchParams();
@@ -22,7 +23,7 @@ const SearchResults = () => {
     }
 
     if(searchResults.length === 0) {
-        return <p className='text-xl font-bold'>No results found</p>
+        return <SearchResultsShimmer />
     }
   return (
     <div className='m-1 p-1 shadow-sm'>
