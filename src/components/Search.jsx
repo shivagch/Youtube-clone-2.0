@@ -63,7 +63,7 @@ const Search = () => {
 
   return (
     <>
-      <input className='w-[500px] h-10 px-2 py-1 border border-gray-400 rounded-l-full' placeholder='search' value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} onFocus={() => setShowSuggestions(true)} />
+      <input className='w-[500px] h-10 px-2 py-1 border border-gray-400 rounded-l-full' placeholder='search' value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)}  onBlur={() => setShowSuggestions(false)} />
       <button className='px-2 h-10 py-1 border border-gray-400 bg-gray-100 rounded-r-full' onClick={() => handleSearchResults(searchQuery)}>Search</button>
       {showSuggestions && (<div className='absolute w-[500px] ml-[390px] px-2 py-1 shadow-lg bg-white border border-white rounded-md'>
         <ul>
